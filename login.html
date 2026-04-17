@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<style>
+body { font-family: Arial; display:flex; justify-content:center; align-items:center; height:100vh; background:#1a3c1e; color:#fff; }
+.box { background:#2a5430; padding:30px; border-radius:10px; width:300px; }
+input { width:100%; padding:10px; margin:10px 0; }
+button { width:100%; padding:10px; background:#f5c842; border:none; cursor:pointer; }
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Login</h2>
+  <input type="text" id="user" placeholder="Gebruiker">
+  <input type="password" id="pass" placeholder="Wachtwoord">
+  <button onclick="login()">Inloggen</button>
+</div>
+
+<script>
+function login() {
+  const u = document.getElementById('user').value;
+  const p = document.getElementById('pass').value;
+
+  if(u === "admin" && p === "1234") {
+    window.location.href = "admin.html";
+  } else {
+    window.location.href = "klant.html";
+  }
+}
+</script>
+
+</body>
+</html>
